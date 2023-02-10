@@ -1,15 +1,15 @@
 # Site settings
-title: Clair de lune 
+title: Claire's Blog
 url: "https://koremp.github.io"
 baseurl: ""
 description: >
-  Claude Debussy - Clair de lune
+  C.A.Debussy - Clair de lune
 
 # My information
 email: im.koremp@gmail.com
 author: 클레어, Claire
-profile: 복잡한 사람
-twitter_username: cad__claireh
+profile: 
+twitter_username: cad__claire
 github_username: koremp
 # comment-support: utterances
 
