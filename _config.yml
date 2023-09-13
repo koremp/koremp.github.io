@@ -1,16 +1,14 @@
 # Site settings
-title: C.A.Debussy - Clair de lune
+title: koremp
 url: "https://koremp.github.io"
 baseurl: ""
 description: >
-  Andante, très expressif
-  약간 느린 빠르기로, 대단히 풍부하게 연주
 
 # My information
 email: im.koremp@gmail.com
 author: Dokyun - Claire - Lim
 profile:
-twitter_username: cad__claire
+twitter_username:
 github_username: koremp
 # comment-support: utterances
 
