@@ -45,4 +45,9 @@ init.vim 에서 :PlugInstall 하기
 - 이메일, 블로그 주소, 썸네일? 변경
 - about.md, robots.txt, package.json, giscus.json, about.md, 404.html의 fallbackRouter 변경
 - _ config.yml 변경
+- [ ] vimwiki 설정이 필요(plugin)
+- [ ] ruby 2.7.8이 m1 air에 설치가 안되고 ubuntu 22.04에서도 안된다. (rvm architecture issue) 그래서 wsl2, ubuntu, windows terminal으로 사용한다.
 
+### 다시 처음으로
+
+다른 분들의 `init.vim`, `.vimrc` 파일을 참고해서 따라가려고 했는데, 플러그인이나 단축키를 내가 설정한 것이 아니고, 내가 vim의 기능을 완전히 쓰지 못한다고 생각했다. practical vim을 다시 읽었다. windows, buffer 등의 기능을 다시 보고 실무에서 쓰면서 활용하려고 한다.
