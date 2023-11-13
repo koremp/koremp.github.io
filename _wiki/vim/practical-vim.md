@@ -1,4 +1,6 @@
-# Vim 표기법
+# practical vim
+
+## Vim 표기법
 
 |표기법| 뜻 |
 
