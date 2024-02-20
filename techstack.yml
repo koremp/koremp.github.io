@@ -1,0 +1,159 @@
+repo_name: koremp/koremp.github.io
+report_id: c12027f29b8d1ae452c9615f6a38d139
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-20T03:02:13+00:00'
+requested_by: koremp
+provider: github
+branch: main
+detected_tools_count: 12
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/koremp/koremp.github.io
+  detection_source: Repo Metadata
+- name: Ruby
+  description: A dynamic, interpreted, open source programming language with a focus
+    on simplicity and productivity
+  website_url: https://www.ruby-lang.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/koremp/koremp.github.io
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/koremp/koremp.github.io
+  detection_source: Repo Metadata
+- name: RubyGems
+  description: Easily download, install, and use ruby software packages on your system
+  website_url: https://rubygems.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/koremp/koremp.github.io/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: John Grib
+  last_updated_on: 2017-11-26 11:45:59.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/koremp/koremp.github.io/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: John Grib
+  last_updated_on: 2017-12-02 03:38:05.000000000 Z
+- name: Jekyll
+  description: Blog-aware, static site generator in Ruby
+  website_url: http://jekyllrb.com/
+  version: 4.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Static Site Generators
+  image_url: https://img.stackshare.io/service/1114/ad968c1615d956e800fa36494314f48c.jpeg
+  detection_source_url: https://github.com/koremp/koremp.github.io/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: JohnGrib
+  last_updated_on: 2021-07-10 05:43:20.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/koremp/koremp.github.io
+  detection_source: Repo Metadata
+- name: jekyll-feed
+  description: A Jekyll plugin to generate an Atom feed of your Jekyll posts
+  package_url: https://rubygems.org/jekyll-feed
+  version: '0.6'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19149/default_b0a1033a29112f6f50b1dd3157e5fbf94dd2778a.png
+  detection_source_url: https://github.com/koremp/koremp.github.io/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: JohnGrib
+  last_updated_on: 2021-07-10 05:43:20.000000000 Z
+- name: jekyll-gist
+  description: Liquid tag for displaying GitHub Gists in Jekyll sites
+  package_url: https://rubygems.org/jekyll-gist
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/rubygems/image.png
+  detection_source_url: https://github.com/koremp/koremp.github.io/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: JohnGrib
+  last_updated_on: 2021-07-10 05:43:20.000000000 Z
+- name: jekyll-paginate
+  description: Built-in Pagination Generator for Jekyll
+  package_url: https://rubygems.org/jekyll-paginate
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19371/default_ac0591cdb829f62a4300d942f96aea1bb642351d.png
+  detection_source_url: https://github.com/koremp/koremp.github.io/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: JohnGrib
+  last_updated_on: 2021-07-10 05:43:20.000000000 Z
+- name: tzinfo-data
+  description: TZInfo::Data contains data from the IANA Time Zone database packaged
+    as Ruby modules for use with TZInfo
+  package_url: https://rubygems.org/tzinfo-data
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: RubyGems Packages
+  image_url: https://img.stackshare.io/package/19516/default_07037590725b871de29c1d2ebb4610950e953355.png
+  detection_source_url: https://github.com/koremp/koremp.github.io/blob/main/Gemfile
+  detection_source: Gemfile
+  last_updated_by: John Grib
+  last_updated_on: 2017-11-26 11:45:59.000000000 Z
+- name: yamljs
+  description: Standalone JavaScript YAML 1.2 Parser &amp; Encoder
+  package_url: https://www.npmjs.com/yamljs
+  version: 0.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16676/default_4b738bf1758d38dddd276589bbea47fca5a990df.png
+  detection_source_url: https://github.com/koremp/koremp.github.io/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: John Grib
+  last_updated_on: 2017-12-02 03:38:05.000000000 Z
