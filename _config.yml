@@ -19,9 +19,9 @@ author: Dokyun Claire Lim
 # --- List of links in the navigation bar --- #
 ###############################################
 
-navbar-links:
-  About Me: "koremp"
-  Author's home: "https://koremp.github.io"
+# navbar-links:
+#   About Me: "koremp"
+#   Author's home: "https://koremp.github.io"
 
 ################
 # --- Logo --- #
