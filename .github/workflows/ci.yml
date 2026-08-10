@@ -1,23 +1,27 @@
-name: CI
+name: Deploy to GitHub Pages
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 on:
-  pull_request:
-    types:
-      - opened
-      - edited
-      - synchronize
-      - reopened
-  workflow_call:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build:
-    name: Code standards & build
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
+  ci:
+    uses: ./.github/workflows/ci.yml
 
+  build:
+    name: Build & upload artifact
+    needs: ci
+    runs-on: ubuntu-latest
     steps:
       - name: "☁️ Checkout repository"
         uses: actions/checkout@v4
@@ -27,7 +31,7 @@ jobs:
         with:
           version: "11.3.0"
 
-      - name: Use Node.js
+      - name: "Use Node.js"
         uses: actions/setup-node@v4
         with:
           node-version: "24"
@@ -36,11 +40,21 @@ jobs:
       - name: "📦 Install dependencies"
         run: pnpm install --frozen-lockfile
 
-      - name: "🔎 Lint code"
-        run: pnpm run lint
-
-      - name: "📝 Checking code format"
-        run: pnpm run format:check
-
-      - name: "🚀 Build the project"
+      - name: "🚀 Build"
         run: pnpm run build
+
+      - name: "📤 Upload artifact"
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
