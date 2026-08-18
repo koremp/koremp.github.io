@@ -4,12 +4,12 @@ export default defineAstroPaperConfig({
   site: {
     url: "https://koremp.github.io/",
     title: "bloggy",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
+    description: "뒤늦게 다시 시작한 개인 블로그. 이런저런 생각과 기록을 남깁니다.",
     author: "Dokyun Lim",
     profile: "https://satna.ing",
     ogImage: "default-og.jpg",
     lang: "en",
-    timezone: "Asia/Bangkok",
+    timezone: "Asia/Seoul",
     dir: "ltr",
   },
   posts: {
@@ -24,15 +24,13 @@ export default defineAstroPaperConfig({
     showBackButton: true,
     editPost: {
       enabled: true,
-      url: "https://github.com/satnaing/astro-paper/edit/main/",
+      url: "https://github.com/koremp/koremp.github.io/edit/main/",
     },
     search: "pagefind",
   },
   socials: [
-    { name: "github",   url: "https://github.com/satnaing/astro-paper" },
-    { name: "x",        url: "https://x.com/username" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/username/" },
-    { name: "mail",     url: "mailto:yourmail@gmail.com" },
+    { name: "github", url: "https://github.com/koremp" },
+    { name: "mail",   url: "mailto:im.koremp@gmail.com" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
