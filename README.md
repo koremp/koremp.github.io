@@ -49,16 +49,16 @@ Inside of AstroPaper, you'll see the following folders and files:
 │   ├── pagefind/          # auto-generated on build
 │   ├── favicon.svg
 │   └── default-og.jpg
+├── contents/
+│   ├── pages/
+│   │   └── about.md
+│   └── posts/
+│       └── some-blog-posts.md
 ├── src/
 │   ├── assets/
 │   │   ├── icons/
 │   │   └── images/
 │   ├── components/
-│   ├── content/
-│   │   ├── pages/
-│   │   │   └── about.md
-│   │   └── posts/
-│   │       └── some-blog-posts.md
 │   ├── i18n/
 │   ├── layouts/
 │   ├── pages/
@@ -72,7 +72,7 @@ Inside of AstroPaper, you'll see the following folders and files:
 └── astro.config.ts
 ```
 
-All blog posts are stored in the `src/content/posts/` directory. You can organise posts into subdirectories — the subdirectory name becomes part of the post URL.
+All blog posts are stored in the `contents/posts/` directory. You can organise posts into subdirectories — the subdirectory name becomes part of the post URL.
 
 ## 📖 Documentation
 

@@ -3,7 +3,7 @@ import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 import config from "@/config";
 
-export const BLOG_PATH = "src/content/posts";
+export const BLOG_PATH = "contents/posts";
 
 const posts = defineCollection({
   loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${BLOG_PATH}` }),
@@ -25,7 +25,7 @@ const posts = defineCollection({
 });
 
 const pages = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/pages" }),
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./contents/pages" }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
