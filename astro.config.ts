@@ -60,13 +60,40 @@ export default defineConfig({
   },
   fonts: [
     {
-      name: "Google Sans Code",
-      cssVariable: "--font-google-sans-code",
-      provider: fontProviders.google(),
-      fallbacks: ["monospace"],
-      weights: [300, 400, 500, 600, 700],
-      styles: ["normal", "italic"],
-      formats: ["woff", "ttf"],
+      name: "Pretendard Variable",
+      cssVariable: "--font-pretendard",
+      provider: fontProviders.local(),
+      fallbacks: ["ui-sans-serif", "system-ui", "sans-serif"],
+      options: {
+        variants: [
+          {
+            weight: "45 920",
+            style: "normal",
+            src: ["pretendard/dist/web/variable/woff2/PretendardVariable.woff2"],
+          },
+        ],
+      },
+    },
+    // Static weights, used only for server-side OG image generation (satori
+    // can't render variable fonts, so it needs discrete weight files).
+    {
+      name: "Pretendard",
+      cssVariable: "--font-pretendard-static",
+      provider: fontProviders.local(),
+      options: {
+        variants: [
+          {
+            weight: 400,
+            style: "normal",
+            src: ["pretendard/dist/web/static/woff/Pretendard-Regular.woff"],
+          },
+          {
+            weight: 700,
+            style: "normal",
+            src: ["pretendard/dist/web/static/woff/Pretendard-Bold.woff"],
+          },
+        ],
+      },
     },
   ],
   env: {
