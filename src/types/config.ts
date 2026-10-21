@@ -34,6 +34,14 @@ interface PostsConfig {
 }
 
 interface FeaturesConfig {
+  /** GitHub Discussions comments. Hidden until Giscus IDs are configured. */
+  comments?:
+    | {
+        repo: `${string}/${string}`;
+        /** Copy these public identifiers from https://giscus.app/ko. */
+        giscus?: { repoId: string; category: string; categoryId: string };
+      }
+    | false;
   /** Enable light/dark mode toggle. Defaults to true. */
   lightAndDarkMode?: boolean;
   /**

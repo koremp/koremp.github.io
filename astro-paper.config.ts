@@ -18,6 +18,14 @@ export default defineAstroPaperConfig({
     scheduledPostMargin: 15 * 60 * 1000,
   },
   features: {
+    comments: {
+      repo: "koremp/koremp.github.io",
+      giscus: {
+        repoId: "R_kgDOTzt3YA",
+        category: "Announcements",
+        categoryId: "DIC_kwDOTzt3YM4DJOsa",
+      },
+    },
     lightAndDarkMode: true,
     dynamicOgImage: true,
     showArchives: true,
