@@ -98,30 +98,50 @@ Documentation can be read in two formats\_ _markdown_ & _blog post_.
 
 ## 👨🏻‍💻 Running Locally
 
-You can start using this project locally by running the following command in your desired directory:
+이 저장소를 받은 뒤 프로젝트 루트에서 실행합니다. Node.js는 `22.12.0` 이상이 필요하며, GitHub Actions와 같은 환경을 쓰려면 Node.js 24와 pnpm 11.3.0을 사용합니다.
 
-```bash
-# pnpm
-pnpm create astro@latest --template satnaing/astro-paper
+Corepack이 설치된 환경에서는 아래 명령으로 pnpm을 내려받고 의존성을 설치할 수 있습니다. 최초 실행에는 npm 레지스트리에 접근할 수 있어야 합니다.
 
-# npm
-npm create astro@latest -- --template satnaing/astro-paper
-
-# yarn
-yarn create astro --template satnaing/astro-paper
-
-# bun
-bun create astro@latest -- --template satnaing/astro-paper
+```powershell
+corepack pnpm@11.3.0 --version
+corepack pnpm@11.3.0 install --frozen-lockfile
+corepack pnpm@11.3.0 dev --host 127.0.0.1 --port 4321
 ```
 
-Then start the project by running the following commands:
+브라우저에서 [로컬 블로그](http://127.0.0.1:4321/)를 엽니다. 서버가 출력하는 실제 주소와 포트를 확인하세요. 글을 저장하면 개발 서버가 변경 사항을 반영합니다.
 
-```bash
-# install dependencies if you haven't done so in the previous step.
-pnpm install
+pnpm 11.3.0이 이미 설치되어 있다면 `corepack pnpm@11.3.0` 대신 `pnpm`을 사용할 수 있습니다.
 
-# start running the project
-pnpm dev
+### 백그라운드 실행과 종료
+
+현재 Astro 버전은 개발 서버의 백그라운드 실행을 지원합니다. 터미널을 계속 점유하지 않고 실행하려면 `--background`를 붙입니다. 상태 확인과 종료 명령도 같은 프로젝트 루트에서 실행합니다.
+
+```powershell
+corepack pnpm@11.3.0 dev --host 127.0.0.1 --port 4321 --background
+corepack pnpm@11.3.0 astro dev status
+corepack pnpm@11.3.0 astro dev logs
+corepack pnpm@11.3.0 astro dev stop
+```
+
+### 글 주소와 초안
+
+글은 `contents/posts/`에 작성하며, 하위 폴더도 URL에 포함됩니다. 예를 들어 `contents/posts/bootda/vibe-coding-chrome-extension.md`의 주소는 `/posts/bootda/vibe-coding-chrome-extension/`입니다.
+
+현재 설정에서 `draft: true`인 글은 개발 서버와 배포 빌드 모두에서 제외되므로, 해당 주소로 접속해도 글이 표시되지 않습니다. `pnpm preview`는 빌드 결과를 확인하는 명령이며 초안 표시 기능을 제공하지 않습니다. 이 동작은 `src/utils/postFilter.ts`에서 확인할 수 있습니다.
+
+### Windows에서 실행이 막힐 때
+
+의존성이 설치된 상태라면 프로젝트의 Astro 실행 파일을 직접 사용할 수도 있습니다.
+
+```powershell
+.\node_modules\.bin\astro.cmd dev --host 127.0.0.1 --port 4321 --background
+```
+
+Astro 실행 중 사용자 설정 폴더의 `astro/Config` 생성 권한 오류가 발생하면, 현재 PowerShell 세션에서 텔레메트리를 끄고 다시 실행합니다.
+
+```powershell
+$env:ASTRO_TELEMETRY_DISABLED = "1"
+.\node_modules\.bin\astro.cmd dev --host 127.0.0.1 --port 4321 --background
 ```
 
 ## Google Site Verification (optional)
