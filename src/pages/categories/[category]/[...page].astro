@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPathsOptions } from "astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
+import { getPostCategories } from "@/utils/getPostCategories";
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const { categories } = getPostCategories(await getCollection("posts"));
+  return categories.flatMap(category =>
+    paginate(category.posts, {
+      params: { category: category.slug },
+      props: { categoryName: category.name },
+      pageSize: config.posts.perPage,
+    })
+  );
+}
+
+const { page, categoryName } = Astro.props;
+const t = useTranslations(Astro.currentLocale);
+---
+
+<Layout title={`${categoryName} | ${t.nav.categories} | ${config.site.title}`}>
+  <Header />
+  <Breadcrumb />
+  <Main pageTitle={categoryName} pageDesc={t.pages.categoryDesc}>
+    <ul>
+      {page.data.map(post => <Card {...post} />)}
+    </ul>
+  </Main>
+  <Pagination {page} />
+  <Footer noMarginTop={page.lastPage > 1} />
+</Layout>

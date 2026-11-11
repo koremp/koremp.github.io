@@ -5,6 +5,7 @@ export default {
     home: "Home",
     posts: "Posts",
     tags: "Tags",
+    categories: "Categories",
     about: "About",
     archives: "Archives",
     search: "Search",
@@ -43,6 +44,9 @@ export default {
 
     tagsTitle: "Tags",
     tagsDesc: "All the tags used in posts.",
+    categoriesDesc: "Browse articles by category.",
+    categoryDesc: "Articles in this category.",
+    uncategorizedTitle: "Uncategorized",
 
     postsTitle: "Posts",
     postsDesc: "All the articles I've posted.",
